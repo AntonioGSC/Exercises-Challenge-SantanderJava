@@ -1,0 +1,30 @@
+package br.com.santander.banco.modelo;
+
+public class ContaPoupanca extends Conta {
+
+	private double taxaJuros;
+	
+	public ContaPoupanca(int agencia, int numero) {
+		super(agencia, numero);
+	}
+
+	@Override
+	public void saca(double valor) {
+		if(valor <= super.saldo) {
+			super.saldo -= valor;
+			System.out.println("Saque efetuado com sucesso !");
+		}
+		else {
+			System.out.println("Saldo Insuficiente");
+		}
+	}
+	
+	public double getTaxaJuros() {
+		return taxaJuros;
+	}
+
+	public void setTaxaJuros() {
+		this.taxaJuros = super.saldo * 0.001;
+		super.saldo += this.taxaJuros;
+	}
+}

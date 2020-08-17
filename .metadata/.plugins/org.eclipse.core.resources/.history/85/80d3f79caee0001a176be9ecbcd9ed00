@@ -1,0 +1,28 @@
+package br.com.santander.banco.modelo;
+
+public class ContaCorrente extends Conta {
+
+	private Cheque cheque;
+	
+	public ContaCorrente(int agencia, int numero) {
+		super(agencia, numero);
+	}
+	
+	@Override
+	public void saca(double valor) {
+		if(valor <= super.saldo) {
+			super.saldo -= valor;
+			System.out.println("Saque efetuado com sucesso !");
+		}
+		else {
+			System.out.println("Saldo Insuficiente");
+		}
+	}
+	
+	public void sacaCheque(double valor, Cheque cheque) {
+		if(cheque.getValor() > valor) {
+			this.cheque = cheque;
+			System.out.println("Saque efetuado com sucesso !");
+		}	
+	}
+}

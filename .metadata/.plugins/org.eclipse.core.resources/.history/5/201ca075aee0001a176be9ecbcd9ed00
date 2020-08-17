@@ -1,0 +1,14 @@
+package br.com.santander.banco.modelo;
+
+public class Cheque {
+	
+	private double valor;
+	private int banco;
+	private String data;
+	
+	public Cheque(double valor, int banco, String data) {
+		this.valor = valor;
+		this.banco = banco;
+		this.data = data;
+	}
+}

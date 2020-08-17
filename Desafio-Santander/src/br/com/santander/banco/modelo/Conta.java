@@ -14,7 +14,10 @@ public abstract class Conta {
 	
 	public void deposita(double valor) {
 		this.saldo += valor;
+		System.out.println("Deposito efetuado com sucesso !");
 	}
+	
+	public abstract void saca(double valor);
 
 	public int getAgencia() {
 		return agencia;
