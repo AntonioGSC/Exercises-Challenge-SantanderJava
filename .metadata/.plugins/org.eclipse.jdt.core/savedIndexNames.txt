@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\AntonioGSC\Projetos\Cursos\Santander Full Stack\Exercicios das aulas\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
+1817933985.index
+4155628025.index

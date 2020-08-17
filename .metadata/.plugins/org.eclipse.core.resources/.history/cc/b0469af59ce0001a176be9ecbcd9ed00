@@ -1,0 +1,14 @@
+package br.com.santander.banco.teste;
+
+import br.com.santander.banco.modelo.Cliente;
+import br.com.santander.banco.modelo.Conta;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cliente cliente = new Cliente("Antonio Gabriel", "392012832-5", "12952789-5");
+
+	}
+
+}

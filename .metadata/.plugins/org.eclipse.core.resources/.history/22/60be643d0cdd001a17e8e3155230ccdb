@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Ex2 {
+	public static void main(String[] args) {
+		Scanner recebeValor = new Scanner(System.in);
+		int valor = 0;
+		int result = 0;
+		System.out.println("Digite um número");
+		valor = recebeValor.nextInt();
+		result = valor;
+		for(int i = 1; i <= valor; i++) {
+			for(int j = 1; j < i; j++) {
+				result *= j;
+			}
+			System.out.println(result);
+		}
+	}
+}
+

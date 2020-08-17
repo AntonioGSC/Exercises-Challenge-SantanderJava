@@ -1,0 +1,14 @@
+package br.com.santander.banco.modelo;
+
+public abstract class Conta {
+	private int agencia;
+	private int conta;
+	private Cliente titular;
+	protected double saldo;
+	
+	public Conta (int agencia, int numero) {
+		this.agencia = agencia;
+		this.numero = numero;
+		System.out.println("Conta Criada");
+	}
+}

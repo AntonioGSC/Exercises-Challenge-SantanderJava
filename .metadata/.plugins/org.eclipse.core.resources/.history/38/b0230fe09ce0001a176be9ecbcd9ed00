@@ -1,0 +1,5 @@
+package br.com.santander.banco.modelo;
+
+public class ContaPoupanca extends Conta {
+
+}
