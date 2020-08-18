@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="br.com.santander.banco.modelo.Cliente"/>
+<fullyQualifiedTypeName name="br.com.santander.banco.modelo.Conta"/>
+<fullyQualifiedTypeName name="br.com.santander.banco.modelo.ContaPoupanca"/>
+<fullyQualifiedTypeName name="br.com.santander.banco.modelo.ContaCorrente"/>
+<fullyQualifiedTypeName name="br.com.santander.banco.modelo.Cheque"/>
 </qualifiedTypeNameHistroy>
