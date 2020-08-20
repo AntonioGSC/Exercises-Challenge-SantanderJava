@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;Ex2&apos; to &apos;Ex3&apos;&#x0D;&#x0A;- Original project: &apos;Exercicios Array e Estrutura de Repeticao&apos;&#x0D;&#x0A;- Original element: &apos;Ex2&apos;&#x0D;&#x0A;- Renamed element: &apos;Ex3&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ex2&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Ex2.java[Ex2" matchStrategy="1" name="Ex3" qualified="false" references="true" similarDeclarations="false" stamp="1597285634437" textual="false" version="1.0"/>
-</session>
