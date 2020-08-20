@@ -6,7 +6,6 @@ INDEX VERSION 1.131+C:\Users\AntonioGSC\Projetos\Cursos\Santander Full Stack\Exe
 2609714019.index
 1542774334.index
 3450831843.index
-375573729.index
 2538946849.index
 561689436.index
 615226062.index

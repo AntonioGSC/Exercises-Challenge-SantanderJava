@@ -2,6 +2,7 @@ package br.com.incognitous.empresa.modelo;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Random;
 
 public abstract class Funcionario {
 	private String endereco;
@@ -12,9 +13,10 @@ public abstract class Funcionario {
 	private LocalDate dataAdmissao;
 	private LocalDate dataDemissao;
 	private LocalDate dataUltimaFerias;
+	private LocalDate dataFimUltimaFerias;
 	protected double salario;
 	
-	public Funcionario(String endereco, String nome, String cpf, String email, String setor, LocalDate dataAdmissao) {
+	public Funcionario(String endereco, String nome, String cpf, String email, String setor, LocalDate dataAdmissao, double salario) {
 		this.endereco = endereco;
 		this.nome = nome;
 		this.cpf = cpf;
@@ -22,21 +24,46 @@ public abstract class Funcionario {
 		this.setor = setor;
 		this.dataAdmissao = dataAdmissao;
 		this.dataUltimaFerias = dataAdmissao;
+		this.salario = salario;
 	}
 
 	public void consultarContraCheque() {
 		System.out.printf("Seu salário é de: R$ %.2f", salario);
 	}
 	
-	public void tirarFeriar() {
-		long mesesAdmissao = ChronoUnit.MONTHS.between(dataAdmissao, LocalDate.now());
-		long mesesUltimaFerias = ChronoUnit.MONTHS.between(dataUltimaFerias, LocalDate.now());
+	public void tirarFeriar(LocalDate dataFerias) {
+		long mesesAdmissao = ChronoUnit.MONTHS.between(dataAdmissao, dataFerias);
+		long mesesUltimaFerias = ChronoUnit.MONTHS.between(dataUltimaFerias, dataFerias);
 		if(mesesAdmissao >= 11 && mesesUltimaFerias >= 4) {
 			System.out.println("Você pode tirar férias");
-			dataUltimaFerias = LocalDate.now();
+			dataUltimaFerias = dataFerias;
+			int dia = dataUltimaFerias.getDayOfMonth();
+			int mes = dataUltimaFerias.getMonthValue();
+			int ano = dataUltimaFerias.getYear();
+			this.dataFimUltimaFerias = LocalDate.of(ano, mes + 1, dia);
 		}
 		else {
 			System.out.println("Você ainda não pode tirar férias");
+		}
+	}
+	
+	public void trabalhar() {
+		long diasComecoFerias = ChronoUnit.DAYS.between(LocalDate.now(), this.dataFimUltimaFerias);
+		if(diasComecoFerias >= 0 && diasComecoFerias <= 31) {
+			System.out.println("Você não pode trabalhar durante as férias, vá para casa e descanse");
+		}
+		else {
+			System.out.println("Bem-vindo a mais um dia de trabalho !");
+		}
+	}
+	
+	public void aumento() {
+		int gerador = new Random().nextInt(10);
+		if(gerador <= 4) {
+			System.out.println("Desculpe, ainda não podemos te dar um aumento");
+		}
+		else {
+			System.out.println("PARABÉNS, você receberá um aumento !!");
 		}
 	}
 
@@ -110,5 +137,13 @@ public abstract class Funcionario {
 	
 	public void setDataUltimaFerias(LocalDate dataUltimaFerias) {
 		this.dataUltimaFerias = dataUltimaFerias;
+		int dia = dataUltimaFerias.getDayOfMonth();
+		int mes = dataUltimaFerias.getMonthValue();
+		int ano = dataUltimaFerias.getYear();
+		this.dataFimUltimaFerias = LocalDate.of(ano, mes + 1, dia);
+	}
+	
+	public LocalDate getDataFimUltimaFerias() {
+		return dataFimUltimaFerias;
 	}
 }
