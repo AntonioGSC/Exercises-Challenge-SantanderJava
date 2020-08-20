@@ -1,5 +1,8 @@
 package br.com.voar.teste;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.voar.modelo.Aviao;
 import br.com.voar.modelo.Pato;
 import br.com.voar.modelo.SuperHomem;
@@ -13,7 +16,10 @@ public class Teste {
 		Pato pato = new Pato();
 		Aviao aviao = new Aviao();
 		SuperHomem superHomem = new SuperHomem();
-		Voador[] voadores = {pato, aviao, superHomem};
+		List<Voador> voadores = new ArrayList<Voador>();
+		voadores.add(pato);
+		voadores.add(aviao);
+		voadores.add(superHomem);
 		
 		TorreDeControle torre = new TorreDeControle(voadores);
 		
