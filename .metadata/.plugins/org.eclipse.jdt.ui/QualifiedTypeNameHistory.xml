@@ -14,5 +14,9 @@
 <fullyQualifiedTypeName name="br.com.incognitous.empresa.modelo.Funcionario"/>
 <fullyQualifiedTypeName name="br.com.incognitous.empresa.modelo.PessoaFisica"/>
 <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="br.com.incognitous.empresa.modelo.PessoaJuridica"/>
 </qualifiedTypeNameHistroy>
