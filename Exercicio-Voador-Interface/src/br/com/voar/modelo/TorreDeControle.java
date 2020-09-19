@@ -1,5 +1,6 @@
 package br.com.voar.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TorreDeControle {
@@ -7,7 +8,7 @@ public class TorreDeControle {
 	List<Voador> voadores; 
 	
 	public TorreDeControle(List<Voador> voadores) {
-		this.voadores = voadores;
+		this.voadores = new ArrayList<>(voadores);
 	}
 	
 	public void voemTodos() {
